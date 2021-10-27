@@ -1,4 +1,17 @@
--- Comments in SQL Start with dash-dash --
+DROP DATABASE IF EXISTS queries_example;
+
+CREATE DATABASE queries_example;
+
+\c queries_example
+
+CREATE TABLE queries
+(
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    price INTEGER,
+    can_be_returned BOOLEAN
+);
+
 -- Add a product to the table with the name of "chair", 
 --  price of 44.00, and can_be_returned of false.
 
@@ -70,3 +83,5 @@ UPDATE products SET price = price + 20;
 -- There's been a change in company policy, and now all products are returnable
 
 UPDATE products SET can_be_returned = 't';
+
+
