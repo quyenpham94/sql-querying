@@ -1,16 +1,3 @@
-DROP DATABASE IF EXISTS queries_example;
-
-CREATE DATABASE queries_example;
-
-\c queries_example
-
-CREATE TABLE queries
-(
-    id SERIAL PRIMARY KEY,
-    name TEXT NOT NULL,
-    price INTEGER,
-    can_be_returned BOOLEAN
-);
 
 -- Add a product to the table with the name of "chair", 
 --  price of 44.00, and can_be_returned of false.
